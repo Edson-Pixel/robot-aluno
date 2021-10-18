@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: gray;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  .central-control {
+    position: fixed;
+    bottom: 32px;
+    height: 116px;
+    width: 116px;
+    transition: border-color 0.3s;
+    cursor: pointer;
+    touch-action: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-end;
+  }
+  .button-cam{
+    padding:15px ;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    background-color: rgba(3, 0, 170, 0.226);
+    appearance: none;
+  }
+  .button-cam:hover{
+    background-color: rgba(7, 5, 110, 0.664);
+  }
+  .button-cam:active{
+    background-color: rgba(27, 3, 95, 0.664);
+  }
+  #direita{
+    font-size: 30px;
+    padding: 20px;
+    font-weight: bold;
+  }
+  #esquerda{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  .joystick-base {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    height: 116px;
+    width: 116px;
+    border-radius: 100%;
+    border: 10px solid rgba(0, 136, 204, 0.1);
+    background: rgba(0, 136, 204, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5) inset, 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s;
+    cursor: pointer;
+    touch-action: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+  .joystick-base:hover, .joystick-base.active {
+    border-color: rgba(0, 136, 204, 0.2);
+  }
+  .joystick-base:hover .joystick-shaft, .joystick-base.active .joystick-shaft {
+    background: rgba(0, 136, 204, 0.35);
+  }
+  .joystick-base.active {
+    background: rgba(0, 136, 204, 0.1);
+  }
+  
+  .joystick-shaft {
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    height: 64px;
+    width: 64px;
+    border-radius: 100%;
+    background: rgba(0, 136, 204, 0.25);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7) inset;
+    transition: background 0.3s;
+    will-change: transform;
+    touch-action: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
